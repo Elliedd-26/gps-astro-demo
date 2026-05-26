@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const events = await getCollection('events');
+const sortedEvents = events.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+<BaseLayout title="Events">
+  <section class="hero">
+    <h1>GPS Events</h1>
+    <p class="hero-sub">
+      A grassroots community for Chinese-speaking queer women in Toronto — 多伦多讲中文酷儿女性社区
+    </p>
+  </section>
+
+  <section class="events-list">
+    {sortedEvents.map((event) => (
+      <a href={`/events/${event.slug}`} class="event-card fade-up">
+        <div class="event-emoji" aria-hidden="true">{event.data.cover_emoji}</div>
+        <div class="event-content">
+          <div class="event-title">{event.data.title}</div>
+          <div class="event-title-zh">{event.data.title_zh}</div>
+          <div class="event-meta">
+            <span>{formatDate(event.data.date)}</span>
+            <span class="event-sep">·</span>
+            <span>{event.data.location}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>
