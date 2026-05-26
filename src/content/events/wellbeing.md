@@ -5,7 +5,7 @@ date: 2026-02-22
 location: "A member's living room, Riverdale"
 location_zh: "一位成员家的客厅，Riverdale"
 host: "GPS Toronto"
-cover_image: "/images/soft-landing/01.jpg"
+cover_image: "/images/soft-landing/01.svg"
 description: "We sat in a circle and said the things we'd been swallowing. No one tried to fix anything. That was the whole point."
 description_zh: "我们围成一圈，说出了那些一直咽下去的话。没有人试图修补什么。这正是这次的意义。"
 photo_caption: "Twelve cushions on the floor, twelve cups of warm water, one quiet afternoon."
@@ -39,7 +39,7 @@ pain or compare who had it worse.
 What we were trying to do was simpler and harder: **just be in the room 
 with each other's mental health, in two languages, without flinching.**
 
-![A close-up of hands holding a warm mug, soft afternoon light](/images/soft-landing/02.jpg)
+![A close-up of hands holding a warm mug, soft afternoon light](/images/soft-landing/02.svg)
 *The host made ginger tea. Someone brought tangyuan. It mattered.*
 
 ## What came up
@@ -64,7 +64,7 @@ away to do that.
 Grief for the version of you your grandmother thought you'd be. Grief 
 that doesn't have a word in either language.
 
-![A handwritten note left on the kitchen counter: "thank you for letting me cry here"](/images/soft-landing/03.jpg)
+![A handwritten note left on the kitchen counter: "thank you for letting me cry here"](/images/soft-landing/03.svg)
 *Someone left this on the kitchen counter when they left. It stayed there all evening.*
 
 ## What helped
@@ -124,7 +124,7 @@ options, and we keep a list. DM us anytime.
 我们试图做的事更简单也更难：**就是和彼此的心理状态待在同一个房间里，
 用两种语言，不退缩。**
 
-![特写：双手捧着温热的马克杯，下午的柔光](/images/soft-landing/02.jpg)
+![特写：双手捧着温热的马克杯，下午的柔光](/images/soft-landing/02.svg)
 *主人煮了姜茶。有人带了汤圆。这些细节是重要的。*
 
 ## 我们说了什么
@@ -144,7 +144,7 @@ trauma是在中文里发生的。那种"必须先翻译，才能感受"的特定
 **没人教过我们命名的那些哀悼。** 出柜的哀悼。Diaspora的哀悼。
 为奶奶想象中那个你的哀悼。那种在哪种语言里都没有词的哀悼。
 
-![厨房台面上一张手写便条："谢谢你让我在这里哭了"](/images/soft-landing/03.jpg)
+![厨房台面上一张手写便条："谢谢你让我在这里哭了"](/images/soft-landing/03.svg)
 *有人离开的时候把这张纸条留在了厨房。它在台面上待了一整晚。*
 
 ## 什么帮到了我们
