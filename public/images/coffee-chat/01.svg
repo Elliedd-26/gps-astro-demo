@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5E8D1"/>
+      <stop offset="1" stop-color="#7B5EA7" stop-opacity="0.30"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2A2520" stop-opacity="0.12"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.92">
+    <circle cx="540" cy="450" r="135" fill="#D9B85D"/>
+    <circle cx="540" cy="450" r="100" fill="#E8C988"/>
+    <circle cx="800" cy="450" r="135" fill="#A47736"/>
+    <circle cx="800" cy="450" r="100" fill="#B88B4F"/>
+    <circle cx="1060" cy="450" r="135" fill="#6B4D2C"/>
+    <circle cx="1060" cy="450" r="100" fill="#8B6644"/>
+  </g>
+  <text x="800" y="720" text-anchor="middle" font-family="Georgia, 'Noto Serif SC', serif" font-size="38" font-weight="600" fill="#4A3870" opacity="0.85">Career Coffee Chat</text>
+  <text x="800" y="770" text-anchor="middle" font-family="Georgia, 'Noto Serif SC', serif" font-size="22" fill="#5C534A" opacity="0.75">职场咖啡聊</text>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>
