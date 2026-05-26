@@ -9,7 +9,11 @@ const events = defineCollection({
     location: z.string(),
     location_zh: z.string(),
     host: z.string(),
-    cover_emoji: z.string(),
+    cover_image: z.string(),
+    description: z.string().optional(),
+    description_zh: z.string().optional(),
+    photo_caption: z.string().optional(),
+    photo_caption_zh: z.string().optional(),
   }),
 });
 

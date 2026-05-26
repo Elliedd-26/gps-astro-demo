@@ -46,7 +46,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Chinese text gets slightly looser line-height */
 .zh,
 [lang^="zh"] {
   font-family: var(--font-zh);
@@ -100,13 +99,13 @@ main {
 
 /* ============ Hero ============ */
 .hero {
-  padding: 56px 0 72px;
+  padding: 56px 0 56px;
   text-align: center;
 }
 
 .hero h1 {
   font-family: var(--font-serif);
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(40px, 6vw, 60px);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
@@ -115,50 +114,88 @@ main {
 }
 
 .hero-sub {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
   color: var(--color-text-secondary);
   font-size: 16px;
   line-height: 1.65;
 }
 
-/* ============ Events list ============ */
-.events-list {
+/* ============ Section ============ */
+.section {
+  margin-top: 24px;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-heading-zh {
+  font-family: var(--font-zh);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-size: 22px;
+}
+
+/* ============ Events grid ============ */
+.events-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  max-width: 720px;
-  margin: 0 auto;
+  gap: 28px;
+}
+
+@media (min-width: 760px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
 }
 
 .event-card {
   display: flex;
-  gap: 24px;
-  align-items: flex-start;
-  padding: 24px 28px;
+  flex-direction: column;
   background: var(--color-bg-section);
-  border-radius: var(--radius-md);
-  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
 .event-card:hover {
   background: var(--color-bg-card);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(42, 37, 32, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(42, 37, 32, 0.10);
 }
 
-.event-emoji {
-  font-size: 44px;
-  flex-shrink: 0;
-  line-height: 1;
+.event-card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-brand-light);
 }
 
-.event-content {
-  flex: 1;
-  min-width: 0;
+.event-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
 }
 
-.event-title {
+.event-card:hover .event-card-cover img {
+  transform: scale(1.03);
+}
+
+.event-card-body {
+  padding: 22px 24px 26px;
+}
+
+.event-card-title {
   font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 600;
@@ -168,17 +205,24 @@ main {
   line-height: 1.25;
 }
 
-.event-title-zh {
+.event-card-title-zh {
   font-family: var(--font-zh);
   font-size: 16px;
   color: var(--color-text-secondary);
   margin-bottom: 12px;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
-.event-meta {
-  font-size: 14px;
+.event-card-meta {
+  font-size: 13px;
   color: var(--color-text-caption);
+  margin-bottom: 14px;
+}
+
+.event-card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
 }
 
 .event-sep {
@@ -194,7 +238,7 @@ main {
 
 .back-link {
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   color: var(--color-brand);
   font-size: 14px;
   transition: color 200ms ease, transform 200ms ease;
@@ -205,15 +249,33 @@ main {
   transform: translateX(-3px);
 }
 
-.event-header {
-  text-align: center;
-  margin-bottom: 64px;
+.event-cover {
+  margin: 0 0 40px;
 }
 
-.event-emoji-large {
-  font-size: 72px;
-  line-height: 1;
-  margin-bottom: 24px;
+.event-cover img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  background: var(--color-brand-light);
+}
+
+.event-cover-caption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--color-text-caption);
+  text-align: center;
+  font-style: italic;
+}
+
+.event-cover-caption .zh {
+  font-style: normal;
+}
+
+.event-header {
+  text-align: center;
+  margin-bottom: 56px;
 }
 
 .event-header h1 {
@@ -261,6 +323,15 @@ main {
   line-height: 1.85;
 }
 
+.prose h1 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
 .prose h2 {
   font-family: var(--font-serif);
   font-size: 24px;
@@ -302,6 +373,15 @@ main {
   font-weight: 600;
 }
 
+.prose ul,
+.prose ol {
+  margin: 0 0 1.4em 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
 .prose hr {
   border: none;
   border-top: 1px solid var(--color-border);
@@ -314,6 +394,20 @@ main {
   margin: 1.6em 0;
   color: var(--color-text-secondary);
   font-style: italic;
+}
+
+.prose img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  margin: 2em 0 0.5em;
+}
+
+.prose img + em {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-caption);
+  margin-bottom: 2em;
 }
 
 /* ============ Footer ============ */
@@ -343,14 +437,15 @@ main {
   }
 }
 
-.events-list .event-card:nth-child(1) { animation-delay: 0ms; }
-.events-list .event-card:nth-child(2) { animation-delay: 80ms; }
-.events-list .event-card:nth-child(3) { animation-delay: 160ms; }
-.events-list .event-card:nth-child(4) { animation-delay: 240ms; }
-.events-list .event-card:nth-child(5) { animation-delay: 320ms; }
+.events-grid .event-card:nth-child(1) { animation-delay: 0ms; }
+.events-grid .event-card:nth-child(2) { animation-delay: 80ms; }
+.events-grid .event-card:nth-child(3) { animation-delay: 160ms; }
+.events-grid .event-card:nth-child(4) { animation-delay: 240ms; }
+.events-grid .event-card:nth-child(5) { animation-delay: 320ms; }
 
 @media (prefers-reduced-motion: reduce) {
   .fade-up { animation: none; }
+  .event-card:hover .event-card-cover img { transform: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -368,24 +463,24 @@ main {
   }
 
   .hero {
-    padding: 40px 0 48px;
+    padding: 40px 0 40px;
   }
 
-  .event-card {
-    padding: 20px;
-    gap: 18px;
+  .section-heading {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 
-  .event-emoji {
-    font-size: 36px;
+  .section-heading-zh {
+    font-size: 18px;
   }
 
-  .event-title {
+  .event-card-body {
+    padding: 18px 20px 22px;
+  }
+
+  .event-card-title {
     font-size: 19px;
-  }
-
-  .event-emoji-large {
-    font-size: 60px;
   }
 
   .event-header {

@@ -27,9 +27,26 @@ function formatDate(date: Date) {
 ---
 <BaseLayout title={event.data.title}>
   <article class="event-detail fade-up">
-    <a href="/" class="back-link">← Back to events</a>
+    <a href="/" class="back-link">← Back to events · 返回活动列表</a>
+
+    <figure class="event-cover">
+      <img
+        src={event.data.cover_image}
+        alt={event.data.photo_caption ?? `Cover image for ${event.data.title}`}
+        width="1600"
+        height="900"
+      />
+      {(event.data.photo_caption || event.data.photo_caption_zh) && (
+        <figcaption class="event-cover-caption">
+          {event.data.photo_caption && <span>{event.data.photo_caption}</span>}
+          {event.data.photo_caption_zh && (
+            <span class="zh"> · {event.data.photo_caption_zh}</span>
+          )}
+        </figcaption>
+      )}
+    </figure>
+
     <header class="event-header">
-      <div class="event-emoji-large" aria-hidden="true">{event.data.cover_emoji}</div>
       <h1>{event.data.title}</h1>
       <h2 class="event-title-zh">{event.data.title_zh}</h2>
       <div class="event-meta">
@@ -40,6 +57,7 @@ function formatDate(date: Date) {
         <span>Hosted by {event.data.host}</span>
       </div>
     </header>
+
     <div class="event-body prose">
       <Content />
     </div>

@@ -5,7 +5,11 @@ date: 2026-05-20
 location: "The Garrison, Toronto"
 location_zh: "The Garrison，多伦多"
 host: "GPS Toronto"
-cover_emoji: "🚦"
+cover_image: "/images/traffic-light/01.svg"
+description: "We tried something new — colored stickers for social readiness. RED, YELLOW, GREEN. The result felt like permission."
+description_zh: "我们试了一个新东西——用颜色贴纸表达社交意愿。红、黄、绿。结果像是一种被允许。"
+photo_caption: "Red. Yellow. Green. Three colors, one room."
+photo_caption_zh: "红、黄、绿。三种颜色，一个房间。"
 ---
 
 Last Thursday at The Garrison, more than forty Chinese-speaking queer women gathered for our monthly Traffic Light Social — and what started as a small experiment in color-coded stickers turned into one of the warmest nights we've had this year.

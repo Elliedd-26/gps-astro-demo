@@ -1,65 +1,97 @@
-# GPS Website · 网站
+# GPS Website Demo
 
-Welcome! This is a small website for **Gal Pal Society Toronto**. You can edit it just by changing text files — no coding needed.
+This is a demo website for GPS (Gal Pal Society) showing how to manage events using markdown files.
 
-欢迎！这是 **GPS 多伦多** 的小网站。修改文字就能更新网站——不需要写代码。
-
----
-
-## 📁 How to edit content / 如何编辑内容
-
-All event posts live in this folder:
-
-所有活动文章都在这个文件夹里：
-
-```
-src/content/events/
-```
-
-Each event is a `.md` file (markdown format). You can open it in any text editor like TextEdit, VS Code, or Notion.
-
-每个活动是一个 `.md` 文件（markdown 格式）。可以用任何文字编辑器打开，比如 TextEdit、VS Code 或 Notion。
+这是 GPS 网站的 demo，演示怎么用 markdown 文件管理活动文章。
 
 ---
 
-## ✍️ How to write a new event / 如何写一篇新活动
+## 📝 What you can do (你可以做什么)
 
-1. **Copy** an existing file, like `traffic-light-social.md`
-2. **Rename it** to something new — use English, hyphens, lowercase (e.g. `june-book-club.md`)
-3. **Change the info at the top** between the `---` lines (title, date, location, etc.)
-4. **Write the article body** in English first, then 中文
+### 1. Edit an existing event (修改已有活动)
 
-1. **复制**一个现有的文件，比如 `traffic-light-social.md`
-2. **改个新名字**——用英文、连字符、全小写（比如 `june-book-club.md`）
-3. **修改文件最上面**两行 `---` 之间的信息（标题、日期、地点等等）
-4. **写文章正文**，先写英文，再写中文
+Go to `src/content/events/` and click any `.md` file (except those starting with `_`). Edit the text, save, and the website updates in about 30 seconds.
+
+去 `src/content/events/` 文件夹，点开任何 `.md` 文件（除了以 `_` 开头的），直接改文字，保存，网站大约30秒后自动更新。
 
 ---
 
-## ⏱️ How changes show up on the website / 改完之后
+### 2. Add a NEW event (添加新活动) ⭐
 
-1. Save the file
-2. Wait about 30 seconds
-3. Refresh the website — your changes will be there ✨
+Step-by-step:
 
-1. 保存文件
-2. 等大概 30 秒
-3. 刷新网页——就能看到你的修改了 ✨
+1. **Copy the template**
+   - In GitHub, go to `src/content/events/_template.md`
+   - Click the "..." menu in the top right, choose "Copy raw file"
+
+   或者直接打开 `_template.md`，复制里面所有内容。
+
+2. **Create a new file**
+   - In `src/content/events/`, click "Add file" → "Create new file"
+   - Name it like `your-event-name.md` (use English, all lowercase, hyphens instead of spaces — this becomes part of the URL)
+   - Example: `qixi-festival-picnic.md`, `lunar-new-year-meetup.md`
+
+   文件名规则：英文、全小写、用 `-` 代替空格。这个文件名会变成网址的一部分。
+
+3. **Paste the template content** into the new file
+
+4. **Fill in your event details** — replace everything in `[brackets]` with your real content. Keep the structure:
+   - `title` and `title_zh`: the event name in English and Chinese
+   - `date`: format like `2026-06-15`
+   - `location` and `location_zh`: where it happened
+   - `cover_image`: path to a cover photo (see step 5 below)
+   - `description` / `description_zh`: a one-sentence preview that shows on the homepage card
+
+   然后填入活动的真实内容。注意保留结构，只替换 `[方括号]` 里的占位文字。
+
+5. **Add photos**
+   - In `public/images/`, create a new folder for your event (e.g., `public/images/qixi-picnic/`)
+   - Upload your photos (rename them to `01.jpg`, `02.jpg`, `03.jpg`, etc.)
+   - Make sure the `cover_image` path in your md file matches
+   - Reference photos in the body using `![description](/images/your-folder/02.jpg)`
+
+   在 `public/images/` 里新建一个属于这个活动的文件夹，把照片放进去（建议命名为 01.jpg, 02.jpg ...）
+
+6. **Commit your changes**
+   - Scroll down on the GitHub page
+   - Write a short message like "Add Qixi festival event"
+   - Click "Commit changes"
+
+7. **Wait ~1 minute**
+   - Vercel will automatically rebuild the site
+   - Your new event will appear on the homepage and at /events/your-event-name
+
+   等大约1分钟，Vercel 会自动重新生成网站，新活动就会出现在首页和对应链接。
 
 ---
 
-## 💡 Tips / 小提示
+### 3. Replace photos (替换照片)
 
-- The **date format** is `YYYY-MM-DD` — for example `2026-05-20`
-- The **emoji at the top** shows up as the event's cover image. Pick anything that fits the vibe 🚦 🌸 ☕️ 🎤
-- Write naturally — markdown will format your paragraphs, *italics*, and **bold** automatically
-- 日期格式是 `YYYY-MM-DD`——比如 `2026-05-20`
-- 文件顶部的 emoji 会作为活动封面图。挑一个有感觉的就行 🚦 🌸 ☕️ 🎤
-- 自然地写就行——markdown 会自动处理段落、*斜体* 和 **粗体**
+In `public/images/[event-folder]/`, replace the .jpg files with new ones of the same names. Commit, wait, done.
+
+在对应活动的图片文件夹里，用相同文件名替换图片，提交，等待，完成。
 
 ---
 
-## 🖥️ Running locally / 在本地预览
+## ❓ FAQ
+
+**Q: What if I make a mistake and the website breaks?**
+A: Don't worry. Go to your Vercel dashboard → Deployments → find the last working version → click "Promote to Production". The site rolls back instantly.
+
+**Q: 如果我搞坏了网站怎么办？**
+A: 别担心。去 Vercel 后台找到上一个正常的版本，点 "Promote to Production"，网站立刻回到上一个状态。
+
+---
+
+**Q: Can I use Chinese characters in the filename?**
+A: Better not to — they cause issues in URLs. Use English with hyphens.
+
+**Q: 文件名可以用中文吗？**
+A: 最好不要，会导致网址问题。用英文小写加横线就好。
+
+---
+
+## 🖥️ Running locally (在本地预览)
 
 If you want to preview before changes go live:
 

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EDE5F4"/>
+      <stop offset="1" stop-color="#7B5EA7" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2A2520" stop-opacity="0.12"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.92">
+    <circle cx="540" cy="450" r="135" fill="#C84B3A"/>
+    <circle cx="800" cy="450" r="135" fill="#E8C766"/>
+    <circle cx="1060" cy="450" r="135" fill="#9FB594"/>
+  </g>
+  <text x="800" y="720" text-anchor="middle" font-family="Georgia, 'Noto Serif SC', serif" font-size="38" font-weight="600" fill="#4A3870" opacity="0.85">Traffic Light Social</text>
+  <text x="800" y="770" text-anchor="middle" font-family="Georgia, 'Noto Serif SC', serif" font-size="22" fill="#5C534A" opacity="0.75">红绿灯社交之夜</text>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>
