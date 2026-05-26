@@ -8,7 +8,7 @@ host: "GPS Toronto"
 cover_emoji: "🚦"
 ---
 
-Last Wednesday at The Garrison, more than forty Chinese-speaking queer women gathered for our monthly Traffic Light Social — and what started as a small experiment in color-coded stickers turned into one of the warmest nights we've had this year.
+Last Thursday at The Garrison, more than forty Chinese-speaking queer women gathered for our monthly Traffic Light Social — and what started as a small experiment in color-coded stickers turned into one of the warmest nights we've had this year.
 
 The premise was simple. A red sticker meant *"just here to listen."* Yellow meant *"open to chat."* Green meant *"looking to connect."* Within an hour, the room had organized itself into easy clusters — greens leaning in by the bar, yellows drifting around the snack table, reds finding quiet corners — but everyone, somehow, in the same room together.
 
@@ -22,7 +22,7 @@ We had been looking for her, too. See you in June.
 
 <div class="zh">
 
-上周三在 The Garrison，四十多位讲中文的酷儿女性聚在一起，参加我们每月一次的「红绿灯社交之夜」。
+上周四在 The Garrison，四十多位讲中文的酷儿女性聚在一起，参加我们每月一次的「红绿灯社交之夜」。
 
 原本只是一个小小的实验——用三种颜色的贴纸把见面这件事变得轻一点——没想到成了今年最温暖的一个晚上。
 
